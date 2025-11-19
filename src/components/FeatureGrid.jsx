@@ -16,18 +16,18 @@ const features = [
 
 export default function FeatureGrid() {
   return (
-    <section className="relative py-14 bg-gradient-to-b from-transparent to-black/20">
+    <section className="relative py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="group rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition p-5">
+            <div key={title} className="card p-5 group">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 rounded-xl bg-gradient-to-br from-violet-500/30 to-amber-500/30 text-white">
                   <Icon className="w-5 h-5" />
                 </div>
                 <h3 className="font-semibold text-white">{title}</h3>
               </div>
-              <p className="mt-3 text-sm text-slate-300/80">{desc}</p>
+              <p className="mt-3 text-sm text-white/80">{desc}</p>
             </div>
           ))}
         </div>
